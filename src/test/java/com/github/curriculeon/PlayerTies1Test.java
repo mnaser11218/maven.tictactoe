@@ -1,4 +1,4 @@
-package rocks.zipcodewilmington.tictactoe;
+package com.github.curriculeon;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * @author leon on 6/20/18.
  */
-public class PlayerWinsRow3Test {
+public class PlayerTies1Test {
 
     private Board board;
 
@@ -15,16 +15,16 @@ public class PlayerWinsRow3Test {
     public void setup() {
         // Given
         this.board = new Board(new Character[][]{
-                {' ', ' ', 'X'},
-                {' ', ' ', 'X'},
-                {'O', 'O', 'O'}
+                {'X', 'O', 'X'},
+                {'O', 'O', 'X'},
+                {'X', 'X', 'O'}
         });
     }
 
     @Test
     public void getWinnerTest() {
         // Given
-        String expectedWinner = "O";
+        String expectedWinner = "";
 
         // When
         String actualWinner = board.getWinner();
@@ -38,7 +38,7 @@ public class PlayerWinsRow3Test {
     @Test
     public void isInFavorOfPlayerOTest() {
         // Given
-        Boolean expected = true;
+        Boolean expected = false;
 
         // When
         Boolean actual = board.isInFavorOfO();
@@ -63,7 +63,7 @@ public class PlayerWinsRow3Test {
     @Test
     public void isTieTest() {
         // Given
-        Boolean expected = false;
+        Boolean expected = true;
 
         // When
         Boolean actual = board.isTie();

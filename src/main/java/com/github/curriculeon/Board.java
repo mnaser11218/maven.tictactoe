@@ -1,4 +1,4 @@
-package rocks.zipcodewilmington.tictactoe;
+package com.github.curriculeon;
 
 /**
  * @author leon on 6/22/18.

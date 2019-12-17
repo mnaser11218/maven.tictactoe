@@ -1,4 +1,4 @@
-package rocks.zipcodewilmington.tictactoe;
+package com.github.curriculeon;
 
 import org.junit.Assert;
 import org.junit.Before;
@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * @author leon on 6/20/18.
  */
-public class PlayerWinsRow2Test {
+public class PlayerWinsDiagnol2Test {
 
     private Board board;
 
@@ -15,9 +15,9 @@ public class PlayerWinsRow2Test {
     public void setup() {
         // Given
         this.board = new Board(new Character[][]{
-                {' ', ' ', 'O'},
-                {'X', 'X', 'X'},
-                {' ', ' ', 'O'}
+                {' ', ' ', 'X'},
+                {' ', 'X', 'O'},
+                {'X', ' ', 'O'}
         });
     }
 
