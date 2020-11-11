@@ -1,7 +1,7 @@
 
 
 
-# Project Title
+# Tic Tac Toe Application
 
 * **Objective** - To create an implementation of a [tic tac toe](https://en.wikipedia.org/wiki/Tic-tac-toe) board.
 * **Purpose** - To gain familiarity with [multidimensional arrays](https://www.geeksforgeeks.org/multidimensional-arrays-in-java/)
