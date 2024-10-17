@@ -4,7 +4,7 @@ package com.github.curriculeon;
  * @author leon on 6/22/18.
  */
 public class Board {
-    public Character[][] matrix = new Character[][]{};
+    public Character[][] matrix;
     public Board(Character[][] matrix) {
         this.matrix = matrix;
     }
@@ -21,9 +21,10 @@ public class Board {
         int countHor = 0;
         int countDia1 =0;
         int countDia2 = 0;
-        int counter = 2;
+
 
         for(int i=0; i<matrix.length; i++){
+            int counter = 2;
 
             for(int j =0; j< matrix.length; j++){
                 if(matrix[i][j].equals('X')){
@@ -45,18 +46,19 @@ public class Board {
                     }
                 }
 
-                if(matrix[j][counter].equals('X')){
+                if(matrix[counter][j].equals('X')){
                     countDia2++;
+                    System.out.println(matrix[counter][j]);
                     if(countDia2==3){
                         return true;
                     }
                 }
+                counter--;
 
             }
             countDia = 0;
             countHor=0;
             countDia1=0;
-            counter-=1;
             countDia2=0;
 
 
@@ -114,7 +116,8 @@ public class Board {
             countCol = 0;
             countDia1 = 0;
             countDia2 = 0;
-            counter = counter -1;
+            counter--;
+
         }
         return results;
     }
